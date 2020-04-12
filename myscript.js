@@ -64,14 +64,6 @@ function increment(quantity, unitPrice, vPrice) {
   document.getElementById(unitPrice).innerText = updatedPrice;
 }
 
-function enterValue(quantity, unitPrice, vPrice) {
-  if (event.keyCode === 13) {
-    var valuePassed = document.getElementById(quantity).value;
-    const updatedPrice = valuePassed * vPrice;
-    document.getElementById(unitPrice).innerText = updatedPrice;
-  }
-}
-
 function sumUp(product1, product2) {
   var phn = document.getElementById(product1).innerText;
   var casing = document.getElementById(product2).innerText;
@@ -93,13 +85,6 @@ y.addEventListener("click", function() {
   removeCart("caching-cart", "caching-price")
 })
 
-
-function removeCart(id1, id2) {
-  document.getElementById(id1).style.display = "none"
-  document.getElementById(id2).innerText = 0;
-  updateSum("total");
-  updateSum("subtotal");
-}
 
 const checkoutBtn = document.getElementById("check-out-btn");
 checkoutBtn.addEventListener("click", function() {
