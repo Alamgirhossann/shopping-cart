@@ -12,11 +12,11 @@
 
 <body>
 
-   <section>
+   <section id="main-section">
       <div class="container">
          <div class="cart">
             <div class="col-md-12 col-lg-10 mx-auto">
-               <div class="cart-item">
+               <div id="phone-cart" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item">
                         <img src="images/product-1.png" alt="">
@@ -25,17 +25,17 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="minus-btn"class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="input-value" type="number" class="form-control text-center" value= "1">
+                           <button id="plus-btn" class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <h5>$ <span id="phone-price">1219</span></h5>
+                        <img id="remove-phone-cart" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
 
-               <div class="cart-item">
+               <div id="caching-cart" class="cart-item">
                   <div class="row">
                      <div class="col-md-7 center-item mx-auto">
                         <img src="images/product-2.png" alt="">
@@ -43,13 +43,13 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="text" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button id="minus-btn-2" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input id="input-value-2" type="number" min="1" max="100" class="form-control text-center" value="1">
+                           <button id="plus-btn-2" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
-                        <img src="images/remove.png" alt="" class="remove-item">
+                        <h5>$ <span id="caching-price">59</span> </h5>
+                        <img id="remove-caching-cart" src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
                </div>
@@ -64,19 +64,30 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$ <span id="subtotal">1,278</span></h5>
+                        <h5>$<span id="tax">0</span></h5>
+                        <h5>$<span id="total">1,278</span></h5>
                      </div>
                   </div>
                </div>
                <div class="col-md-12 pt-4 pb-4">
-                  <button type="button" class="btn btn-success check-out">Check Out</button>
+                  <button id="check-out-btn" type="button" class="btn btn-success check-out">Check Out</button>
                </div>
             </div>
          </div>
       </div>
    </section>
+   <section id="thankyou-section">
+      <div class="container">
+         <div class="row">
+            <div class="div col-12">
+               <h1 class="text-center">Thank You For Shopping!</h1>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <script src="myscript.js"></script>
 </body>
 
 </html>
